@@ -4,9 +4,15 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 
 const app = express();
-app.use(cors());
+// app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Use the cors middleware
+app.use(cors({
+  origin: 'https://portfolio-website-frontend-beta.vercel.app'
+  // You can also add other options like methods and headers
+}));
 
 // 1. Connection Caching Logic
 let isConnected = false;
