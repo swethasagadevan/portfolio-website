@@ -14,7 +14,7 @@ const Project = () => {
   const [projectList,setProjectList]=useState([])
 
   useEffect(()=>{
-    axios.get(`${backendurl}getProjects`)
+    axios.get(`${backendurl}/getProjects`)
     .then(data=>{
       console.log(data.data)
       setProjectList(data.data) 
