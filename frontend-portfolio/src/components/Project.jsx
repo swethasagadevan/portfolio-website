@@ -14,7 +14,7 @@ const Project = () => {
   const [projectList,setProjectList]=useState([])
 
   useEffect(()=>{
-    axios.get(`${backendurl}/getProjects`)
+    axios.get(`${backendurl}getProjects`)
     .then(data=>{
       console.log(data.data)
       setProjectList(data.data) 
@@ -29,9 +29,9 @@ const Project = () => {
       <FaLaptopCode/>
       <h2>Projects</h2>
       </div>
-      <div className='md:grid grid-cols-2 bg-yellow-100 m-5'>
+      <div className='md:grid grid-cols-2 bg-zinc-300 m-5 text-white'>
       {projectList.map((data,index)=>(
-        <div key={index} className='border rounded-lg shadow-lg bg-lime-300 p-4 m-4 flex-1' width="100%">
+        <div key={index} className='border rounded-lg shadow-lg bg-black p-4 m-4 flex-1' width="100%">
           <h3 className='text-xl font-bold mb-2'>{data.name}</h3>
           <p>{data.description}</p>
           <div className='flex flex-wrap items-center gap-2 mt-2'>
