@@ -1,6 +1,6 @@
 import React from 'react'
 import {FaUser} from "react-icons/fa"
-import profileimg from '../assets/heroimage.png'
+import profileimg from '../assets/heroimage.jpeg'
 import resume from '../assets/Swetha_Sagadevan.pdf'
 
 const About = () => {
@@ -15,17 +15,18 @@ const About = () => {
     {name:"Firebase",icon:<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48"><path fill="#ff8f00" d="M8,37L23.234,8.436c0.321-0.602,1.189-0.591,1.494,0.02L30,19L8,37z"></path><path fill="#ffa000" d="M8,36.992l5.546-34.199c0.145-0.895,1.347-1.089,1.767-0.285L26,22.992L8,36.992z"></path><path fill="#ff6f00" d="M8.008 36.986L8.208 36.829 25.737 22.488 20.793 13.012z"></path><path fill="#ffc400" d="M8,37l26.666-25.713c0.559-0.539,1.492-0.221,1.606,0.547L40,37l-15,8.743 c-0.609,0.342-1.352,0.342-1.961,0L8,37z"></path></svg>}
   ]
   return (
-    <div id="about" className='bg-gradient-to-tr from-green-600 via-emerald-300 to-yellow-400 p-5 md:grid md:grid-cols-3'>
-      <div className='col-span-2'>
-      {/* title */}
-      <div className='text-3xl flex gap-3 items-center font-bold justify-center'>
+    // <div id="about" className='bg-gradient-to-tr from-green-600 via-emerald-300 to-yellow-400 p-5 md:grid md:grid-cols-3'>
+     <div id="about" className=' py-10'> 
+      <div className='grid grid-cols-4'>
+      <img src={profileimg} alt="portfolio image" width="100%" className='mt-2 p-5 rounded-full'/> 
+      <div className=' md:grid col-span-3 md:m-10'>
+        {/* title */}
+        <div className='text-3xl flex gap-3 items-center font-bold justify-center'>
             <FaUser/><h2>About</h2>
         </div>
         {/* description */}
-      <div className=' md:grid md:grid-cols-5 md:m-10'>
-        <img src={profileimg} alt="portfolio image" width="100%" className='mt-2 rounded-full'/>  
-        <div className='ml-10 col-span-3'>
-        <p className='p-3 text-wrap sm:text-m md:text-xl'>MERN Stack Developer specializing in the design and development of responsive, scalable, and user-centric web applications using modern JavaScript technologies.</p>
+        <div className='ml-10 '>
+        <p className='p-3 text-wrap sm:text-m md:text-xl italic '>I’m a developer who loves crafting clean and intuitive web experiences. From designing responsive interfaces to integrating dynamic APIs, I enjoy solving problems and building applications that are both functional and visually appealing.</p>
         <div className='md:flex gap-10 p-3 mb-5'>
         <div>
         <h1 className='sm:text-xl md:text-3xl font-bold'>14 +</h1>
@@ -40,7 +41,7 @@ const About = () => {
     </div>
     </div>
         {/* tect stack icons */}
-      <div className='grid grid-cols-2 sm:text-s p-2 mt-3 md:text-xl border shadow-xl' >
+      <div className='flex flex-wrap gap-2 justify-evenly sm:text-s p-2 mt-3 md:text-xl border shadow-xl' >
       {tags.map((data,index)=>(<div key={index} className='flex flex-wrap gap-1 items-center'>{data.icon} <p>{data.name}</p> </div>))}
       </div>
     </div>
