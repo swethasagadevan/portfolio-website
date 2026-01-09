@@ -32,7 +32,7 @@ const Header = () => {
 
   return (
     <>
-    <div className='bg-green-800 text-white flex justify-between items-center px-8 py-5 sticky top-0 sm:text-m'>
+    <div className='bg-black text-white flex justify-between items-center px-8 py-5 fixed w-full sm:text-m'>
         <div className='flex items-center gap-1'>
           {/* <FaS className='bg-yellow-400 text-green-800 sm:text-2xl md:text-4xl p-1 rounded-full' /> */}
         <h1 className='font-bold sm:text-xl md:text-3xl text-white'>Swetha Sagadevan</h1>
@@ -45,7 +45,7 @@ const Header = () => {
         </div>}
         
     </div>
-    {close && <div id="slidingMenu" className='bg-green-800 flex flex-col p-5 sticky top-0 left-0 h-screen w-1/2 text-white z-4'>
+    {close && <div id="slidingMenu" className='bg-black flex flex-col p-5 sticky top-0 left-0 h-screen w-1/2 text-white z-4'>
         <p className='absolute right-5 top-5' onClick={handleClose}>X</p>
           {links.map((item,index)=>(<Link key={index} to={item.path} className='p-5' onClick={handleClose}>{item.name}</Link>))}
         </div>}
