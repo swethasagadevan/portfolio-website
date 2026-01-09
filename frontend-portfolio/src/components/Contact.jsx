@@ -1,5 +1,5 @@
 import React from 'react'
-import {FaHeadset, FaUserAlt} from 'react-icons/fa'
+import {FaGithubSquare, FaHeadset, FaLinkedin, FaUserAlt} from 'react-icons/fa'
 import { IoMail } from 'react-icons/io5'
 import contactimg from '../assets/contact1.png'
 import { FaMessage } from 'react-icons/fa6'
@@ -42,6 +42,10 @@ const Contact = () => {
         <div className='flex gap-3 items-center border-2 rounded-lg p-3 mb-4'><IoMail/><input type="text" name="email" onChange={(e)=>setEmail(e.target.value)} placeholder="Email" className='focus:outline-none'/></div>
         <div className='flex gap-3 items-center border-2 rounded-lg p-3 mb-6'><FaMessage/><input type="text" name="message" onChange={(e)=>setMessage(e.target.value)} placeholder="Message" className='focus:outline-none'/></div>
         <input type="submit" className='bg-orange-600 text-white p-2 rounded-lg' />
+        <p className='mt-5'>or contact </p>
+        <p className='flex items-center gap-1 text-blue-400'><IoMail/>swethasagadevan@gmail.com</p>
+        <a href='https://www.linkedin.com/in/swethasagadevan/' className='text-blue-400 flex items-center gap-1'> <FaLinkedin/> LinkedIN </a>
+        <a href='https://github.com/swethasagadevan' className='text-blue-400 flex items-center gap-1'> <FaGithubSquare/> GitHub</a>
       </form>
     </div>  
     </div>
